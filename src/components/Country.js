@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
-export default function Country(props) {
+function Country(props) 
+{
   const country = props.country;
 
   if (
@@ -38,3 +39,5 @@ export default function Country(props) {
   }
   return null;
 }
+
+export default Country;
