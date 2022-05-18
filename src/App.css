@@ -57,6 +57,10 @@
   color: hwb(0 0% 100%);
 }
 
+.list{
+  text-align: left;
+}
+
 input[type="text"] {
   width: 110%;
   padding: 12px 20px;

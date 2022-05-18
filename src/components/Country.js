@@ -15,7 +15,7 @@ function Country(props) {
         </div>
         <br />
         <div className="card-body">
-          <ul>
+          <ul className="list">
             <li> Pais: {country.name}</li>
             <li> Capital: {country.capital}</li>
             <li> Emoji: {country.emoji}</li>
