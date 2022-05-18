@@ -1,11 +1,8 @@
 import React from 'react';
 import Country from './Country';
 
-
-
-
 function GetCountryByLanguageComponent(props)
-{
+{   
     let title = false;
     props.countries.map(country => 
         country.name.toLowerCase().indexOf(props.search.toLowerCase()) > -1 && props.search.length > 0 &&
@@ -18,10 +15,10 @@ function GetCountryByLanguageComponent(props)
                 {title ? props.language.name : null}
             </div>
             {props.countries.map(
-                country => 
+                (country, index) => 
                 country.languages.map(
                     language => language.name === props.language.name
-                ? <Country country={country} search={props.search}/>
+                ? <Country key={index} country={country} search={props.search}/>
                 : null
                 ))}
         </div>

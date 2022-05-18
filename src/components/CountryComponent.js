@@ -24,7 +24,7 @@ function CountryComponent(props)
             <div className="card-body">
                 {title ? props.continent.name : null}
             </div>
-            {data.countries.map(country => <Country country={country} search={props.search}/>)}
+            {data.countries.map((country, index) => <Country key={index} country={country} search={props.search}/>)}
         </div>
     )
 }

@@ -24,7 +24,7 @@ function ContinentComponent(props)
 
                 {
                 data.continents.map(
-                    continent => <CountryComponent continent={continent} languages={""} search={props.search} />)}
+                    (continent, index) => <CountryComponent key={index} continent={continent} languages={""} search={props.search} />)}
             </div>
         </div>
     )

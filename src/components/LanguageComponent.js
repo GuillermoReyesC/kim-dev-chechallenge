@@ -14,8 +14,9 @@ function LanguageComponent(props) {
     <div className="card-title">
       <div className="card-body">
         {title ? props.language.name : null}
-        {data.languages.map((language) => (
-          <GetCountryByLanguageComponent
+        {data.languages.map((language, index) => (
+          <GetCountryByLanguageComponent 
+            key={index}
             countries={props.countries}
             language={language}
             search={props.search}

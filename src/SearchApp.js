@@ -87,7 +87,7 @@ const client = new ApolloClient({
                         </button>
                       </div>
                       <div id="continent" style={{display: 'block'}} className="col-md-6">
-                        <ContinentComponent search={search}/>
+                        <ContinentComponent  search={search}/>
                         </div>
                       <div id="language" style={{display: 'none'}} className="col-md-6">
                         <LanguageComponent countries={countries} search={search}/>
