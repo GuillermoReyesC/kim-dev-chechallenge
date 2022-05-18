@@ -9,7 +9,7 @@ function CountryComponent(props)
     const { data, loading, error } = useQuery(
         GET_COUNTRIES, {variables: {query: props.continent.code}}
     );
-    if (loading) return <h3> </h3>;
+    if (loading) return <h3>  </h3>;
     if (error) return <h2>404. Looks like API is down!</h2>;
      
 

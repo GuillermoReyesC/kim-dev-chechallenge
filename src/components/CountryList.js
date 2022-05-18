@@ -23,7 +23,6 @@ const GET_ALL_COUNTRIES = gql`
   }
 `;
 
-
 export const CountryList = () => (
   <Query query={GET_ALL_COUNTRIES}>
     {({ loading, error, data }) => {
@@ -31,42 +30,35 @@ export const CountryList = () => (
       if (loading) return <h1>Loading...</h1>;
       if (error) return <h2>404. Looks like API is down!</h2>;
 
-
       return (
         <>
           <div className="md-6">
-            
             <div className="card">
-              
-                  <Query query={GET_ALL_COUNTRIES}>
-                    {({ loading, error, data }) => {
-                      if (loading) return <h1>Loading...</h1>;
-                      if (error) return <h2>404. Looks like API is down!</h2>;
-                      return (
-                        <div className="card-body">
-                          <h1> list of Countries</h1>
-                          <p>for reference</p>
-                          <ul className="list-group">
-                            {data.countries.map((country) => (
-                              <li
-                                className="list-group-item"
-                                key={country.code}
-                              >
-                                Pais: {country.name} <br />
-                                Continente: {country.continent} <br />
-                                Codigo: {country.code} <br />
-                                Moneda: {country.currency} <br />
-                                Lenguaje: {country.languages.name} <br />
-                                Emoji: {country.emoji} <br />
-                                
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      );
-                    }}
-                  </Query>
-                </div>
+              <Query query={GET_ALL_COUNTRIES}>
+                {({ loading, error, data }) => {
+                  if (loading) return <h1>Loading...</h1>;
+                  if (error) return <h2>404. Looks like API is down!</h2>;
+                  return (
+                    <div className="card-body">
+                      <h1> list of Countries</h1>
+                      <p>for reference</p>
+                      <ul className="list-group">
+                        {data.countries.map((country) => (
+                          <li className="list-group-item" key={country.code}>
+                            Pais: {country.name} <br />
+                            Continente: {country.continent} <br />
+                            Codigo: {country.code} <br />
+                            Moneda: {country.currency} <br />
+                            Lenguaje: {country.languages.name} <br />
+                            Emoji: {country.emoji} <br />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                }}
+              </Query>
+            </div>
           </div>
         </>
       );
@@ -75,4 +67,3 @@ export const CountryList = () => (
 );
 
 export default CountryList;
-
