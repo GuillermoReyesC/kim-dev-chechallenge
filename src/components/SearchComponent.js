@@ -11,7 +11,7 @@ function SearchComponent(props) {
         value={props.search}
         onChange={(event) => {
           props.set(event.target.value);
-          console.log(event.target.value);
+          console.log('u wrote this:'+ event.target.value);
         }}
       />
       <hr />
