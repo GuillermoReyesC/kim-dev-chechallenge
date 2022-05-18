@@ -17,12 +17,13 @@ function Country(props) {
                 </div>
                 <br/>
                 <div className="card-body">
-                    <ul className="card-body">
-                   <li> Capital: {country.capital} <br/></li>
-                   <li> Emoji: {country.emoji} <br/></li>
-                   <li> Moneda: {country.currency} <br /></li>
-                   <li> Nombre nativo: {country.native} <br/></li>
-                   <li> Codigo telefono: +{country.phone} <br/></li>
+                    <ul >
+                   <li> Pais: {country.name}</li>
+                   <li> Capital: {country.capital}</li>
+                   <li> Emoji: {country.emoji}</li>
+                   <li> Moneda: {country.currency}</li>
+                   <li> Nombre nativo: {country.native}</li>
+                   <li> Codigo telefono: +{country.phone}</li>
                     </ul>
                 </div>
             

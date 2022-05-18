@@ -58,7 +58,7 @@
 }
 
 input[type="text"] {
-  width: 100%;
+  width: 110%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -68,6 +68,13 @@ input[type="text"] {
   transition: 0.5s;
   outline: none;
 }
+input[type="text"]:hover{
+  border: 1px solid rgb(204, 204, 204);
+  background-color: rgb(198, 230, 231);
+}
+input[type="text"]:focus {
+  border: 2px solid #000000;
+}
 .card-header {
   text-align: left;
 }
@@ -75,6 +82,7 @@ input[type="text"] {
   text-align: center;
 }
 .card-body {
+  width: 80%;
   text-align: left;
   margin-left: 5px;
   margin-right: 5px;
@@ -83,6 +91,7 @@ input[type="text"] {
   border-radius: 15px;
   justify-content: space-around;
 }
+
 
 .card-content {
   text-align: left;
@@ -93,8 +102,37 @@ input[type="text"] {
   border: 1px solid;
   background-color: rgb(255, 255, 255);
 }
+.card-content:hover {
+  background-color: rgb(216, 241, 241);
+}
 .span-text{
   text-align: center;
-  
+  font-weight: 200;
+}
+
+.myButton {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(222, 236, 236);
+  color: #000;
+  padding: 10px 20px;
+  display: inline-block;
+}
+.myButton::before{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 0;
+}
+.myButton:hover {
+  background-color: rgb(144, 216, 216);
+  color: rgb(0, 0, 0);
+}
+.myButton:active {
+  background-color: rgb(144, 216, 216);
+  color: rgb(0, 0, 0);
 }
 
