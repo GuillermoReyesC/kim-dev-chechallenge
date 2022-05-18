@@ -2,7 +2,7 @@ import { gql } from "apollo-boost";
 
 export const GET_ALL_COUNTRIES = gql`
 query getAllCountries {
-    countries {
+    countries { 
       name
       native
       phone
@@ -12,14 +12,18 @@ query getAllCountries {
       languages {
           name
       }
+      continent {
+          name
+          code
+      }
     }
   }
 `;
 
 
 export const GET_COUNTRIES = gql`
-query getCountries ($cont: String!) {
-    countries (filter: {continent: {eq: $cont}}) {
+query getCountries ($query: String!) {
+    countries (filter: {continent: {eq: $query}}) {      
       name
       native
       phone
@@ -32,7 +36,7 @@ query getCountries ($cont: String!) {
 
 export const GET_CONTINENTS = gql`
 query continent {
-    continents {
+    continents {     
       name
       code
     }
@@ -41,7 +45,7 @@ query continent {
 
 export const GET_LANGUAGES = gql`
 query getLanguages  {
-    languages {
+    languages {      
       name
       native
     }

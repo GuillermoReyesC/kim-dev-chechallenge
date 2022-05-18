@@ -21,11 +21,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(172, 172, 172);
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,65 @@
     transform: rotate(360deg);
   }
 }
+.h5-text-center {
+  text-align: center;
+}
+.card {
+  max-width: 500px;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 1%;
+  border: #282c34;
+  background-color: rgb(221, 217, 217);
+
+  color: hwb(0 0% 100%);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+.card-header {
+  text-align: left;
+}
+.card-title {
+  text-align: center;
+}
+.card-body {
+  text-align: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  border-radius: 15px;
+  justify-content: space-around;
+}
+
+.card-content {
+  text-align: left;
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid;
+  background-color: rgb(255, 255, 255);
+}
+.span-text{
+  text-align: center;
+  
+}
+
